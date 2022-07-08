@@ -1,13 +1,53 @@
-<p>hero-search works!</p>
-<div id="search-component">
-    <label for="search-box">Hero Search</label>
-    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+/* HeroSearch private styles */
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    text-align: center;
   
-    <ul class="search-result">
-      <li *ngFor="let hero of heroes$ | async" >
-        <a routerLink="/detail/{{hero.id}}">
-          {{hero.name}}
-        </a>
-      </li>
-    </ul>
-  </div>
+  }
+  input {
+    padding: .5rem;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  input:focus {
+    outline: #336699 auto 1px;
+    text-align: center;
+  }
+  
+  li {
+    list-style-type: none;
+
+  }
+  .search-result li a {
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+    padding: .5rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: rgb(35, 83, 77);
+    text-align: center;
+  }
+  
+  .search-result li a:hover {
+    background-color: #435A60;
+    color: rgb(88, 163, 224);
+    text-align: center;
+  }
+  
+  ul.search-result {
+    margin-top: 0;
+    padding-left: 0;
+    text-align: center;
+  }
